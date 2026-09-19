@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Inovasi Pembelajaran - Atalia, S.Pd.</title>
+<meta name="description" content="10 Karya Inovasi Pembelajaran PPG Universitas Bung Hatta oleh Atalia, S.Pd.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f7f0;
+    color: #1b5e20;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.08);
+  }
+  
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #43a047 100%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+  }
+  
+  .header h1 {
+    font-size: 2.4em;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .header .subtitle {
+    font-size: 1.05em;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .header .author {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* INTRO */
+  .intro {
+    padding: 35px 30px;
+    background: #f1f8e9;
+    border-bottom: 4px solid #a5d6a7;
+    text-align: center;
+  }
+  
+  .intro h2 {
+    font-size: 1.3em;
+    color: #1b5e20;
+    margin-bottom: 10px;
+  }
+  
+  .intro p {
+    font-size: 1em;
+    color: #33691e;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+    padding: 35px;
+    background: #fafffa;
+  }
+  
+  /* CARD */
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    border-left: 6px solid #43a047;
+    padding: 28px;
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, transparent 50%, rgba(67,160,71,0.08) 50%);
+    border-radius: 0 0 0 80px;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(67,160,71,0.18);
+  }
+  
+  .card .number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.05em;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 10px rgba(67,160,71,0.3);
+  }
+  
+  .card .matkul {
+    font-size: 0.82em;
+    color: #558b2f;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+  }
+  
+  .card h3 {
+    font-size: 1.2em;
+    color: #1b5e20;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  
+  .card .innovation-name {
+    font-size: 0.98em;
+    font-weight: 700;
+    color: #2e7d32;
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    display: block;
+    font-style: italic;
+  }
+  
+  .card p {
+    font-size: 0.94em;
+    color: #33691e;
+    margin-bottom: 10px;
+  }
+  
+  .card .label {
+    font-weight: 700;
+    color: #2e7d32;
+  }
+  
+  .card ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+    font-size: 0.92em;
+    color: #33691e;
+  }
+  
+  .card ul li {
+    margin-bottom: 5px;
+  }
+  
+  .card .alur {
+    background: #fff8e1;
+    border-left: 4px solid #ffb300;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #e65100;
+    margin-top: 14px;
+    letter-spacing: 0.3px;
+  }
+  
+  .card .output {
+    background: #f3e5f5;
+    border-left: 4px solid #8e24aa;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #4a148c;
+    margin-top: 10px;
+  }
+  
+  .card .keterhubungan {
+    background: #e3f2fd;
+    border-left: 4px solid #1e88e5;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88em;
+    color: #0d47a1;
+    margin-top: 10px;
+  }
+  
+  /* FLOW SECTION */
+  .flow-section {
+    padding: 40px 30px;
+    background: linear-gradient(180deg, #f1f8e9 0%, #e8f5e9 100%);
+    border-top: 4px solid #a5d6a7;
+    border-bottom: 4px solid #a5d6a7;
+  }
+  
+  .flow-section h2 {
+    text-align: center;
+    color: #1b5e20;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+  }
+  
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .flow-step {
+    background: #ffffff;
+    border: 2px solid #43a047;
+    border-radius: 14px;
+    padding: 14px 20px;
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(67,160,71,0.12);
+    transition: all 0.3s ease;
+    min-width: 120px;
+  }
+  
+  .flow-step:hover {
+    background: #e8f5e9;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(67,160,71,0.25);
+  }
+  
+  .flow-step small {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #558b2f;
+    margin-top: 4px;
+  }
+  
+  .flow-arrow {
+    font-size: 1.4em;
+    color: #43a047;
+    font-weight: bold;
+  }
+  
+  /* FOOTER */
+  .footer {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    color: white;
+    text-align: center;
+    padding: 35px 30px;
+  }
+  
+  .footer strong {
+    font-size: 1.15em;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 0.95em;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer .credit {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.85em;
+    opacity: 0.8;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .header h1 { font-size: 1.6em; }
+    .header .subtitle { font-size: 0.9em; }
+    .grid { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
+    .card { padding: 22px; }
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+    .flow-step { width: 100%; }
+    .intro { padding: 25px 20px; }
+    .flow-section { padding: 30px 20px; }
+  }
+  
+  @media (max-width: 480px) {
+    .header { padding: 35px 20px; }
+    .header h1 { font-size: 1.3em; }
+    .card h3 { font-size: 1.05em; }
+    .card .innovation-name { font-size: 0.9em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>🌱 10 Karya Inovasi Pembelajaran</h1>
+    <p class="subtitle">Refleksi Pengalaman Belajar Semester 1</p>
+    <p class="subtitle">Pendidikan Profesi Guru — Universitas Bung Hatta</p>
+    <div class="author">Atalia, S.Pd. | NPM: 25100136162466</div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <h2>Ekosistem Pembelajaran Pendidikan Pancasila</h2>
+    <p>
+      Sepuluh inovasi ini saling terhubung membentuk satu ekosistem: peserta didik didengar, 
+      dipahami kebutuhannya, diberi pengalaman belajar mendalam, didorong untuk bertumbuh, 
+      guru melakukan perbaikan berbasis bukti, emosi dikelola, diferensiasi diterapkan, 
+      dan seluruh proses berlangsung secara fleksibel.
+    </p>
+  </div>
+
+  <!-- GRID 10 KARTU -->
+  <div class="grid">
+
+    <!-- 1. FPPN -->
+    <div class="card">
+      <span class="number">1</span>
+      <div class="matkul">Filosofi Pendidikan dan Pendidikan Nilai (FPPN)</div>
+      <h3>Suara Belajar Jar</h3>
+      <div class="innovation-name">"Pendapatmu berharga, suaramu didengar."</div>
+      <p><span class="label">Bentuk:</span> Jar/botol transparan berisi kertas 3 warna untuk menampung respons anonim peserta didik.</p>
+      <ul>
+        <li>🟡 <strong>Kuning</strong> — "Saya menemukan..."</li>
+        <li>🔵 <strong>Biru</strong> — "Saya masih..."</li>
+        <li>🌸 <strong>Merah muda</strong> — "Saya berharap..."</li>
+      </ul>
+      <p><span class="label">Cara:</span> Di akhir pembelajaran, siswa menulis respons anonim, guru membaca dan menindaklanjuti pada pertemuan berikutnya.</p>
+      <div class="alur">SISWA BERSUARA → GURU MENDENGAR → KEBUTUHAN TERBACA → PEMBELAJARAN DIRANCANG</div>
+      <div class="output">OUTPUT: Suara & pengalaman peserta didik</div>
+      <div class="keterhubungan">Menjadi fondasi bagi "Peta Profil & Kebutuhan Belajar" di PPDP.</div>
+    </div>
+
+    <!-- 2. PPDP -->
+    <div class="card">
+      <span class="number">2</span>
+      <div class="matkul">Pemahaman Peserta Didik dan Pembelajaran (PPDP)</div>
+      <h3>Peta Profil Belajarku</h3>
+      <div class="innovation-name">"Kenali Cara Belajarku, Sesuaikan Pembelajaranku."</div>
+      <p><span class="label">Bentuk:</span> Kartu/lembar profil belajar untuk setiap peserta didik (kertas A5, kartu laminasi, atau digital).</p>
+      <p><span class="label">Isi:</span> Cara belajar, bentuk interaksi, dukungan saat kesulitan, aktivitas menarik, hambatan, dan cara guru membantu.</p>
+      <p><span class="label">Cara:</span> Diisi awal semester, digunakan guru untuk menentukan materi, aktivitas, media, dan bentuk tugas.</p>
+      <div class="alur">DATA SUARA SISWA → PROFIL KEBUTUHAN → DIFERENSIASI PEMBELAJARAN → BUKTI BELAJAR</div>
+      <div class="output">OUTPUT: Informasi kebutuhan & karakteristik peserta didik</div>
+      <div class="keterhubungan">Melanjutkan "Suara Belajar Jar" dan menjadi dasar "Paspor Deep Learning Pancasila".</div>
+    </div>
+
+    <!-- 3. PMAD -->
+    <div class="card">
+      <span class="number">3</span>
+      <div class="matkul">Pembelajaran Mendalam dan Asesmen Dasar (PMAD)</div>
+      <h3>Paspor Deep Learning Pancasila</h3>
+      <div class="innovation-name">"Dari Tahu → Paham → Berpikir → Bertindak"</div>
+      <p><span class="label">Bentuk:</span> Buku saku/portofolio yang diisi peserta didik setiap materi.</p>
+      <ul>
+        <li>📘 <strong>Cap 1</strong> — Saya Tahu</li>
+        <li>📗 <strong>Cap 2</strong> — Saya Paham</li>
+        <li>📙 <strong>Cap 3</strong> — Saya Berpikir</li>
+        <li>📕 <strong>Cap 4</strong> — Saya Bertindak</li>
+        <li>📓 <strong>Cap 5</strong> — Saya Berubah</li>
+      </ul>
+      <div class="alur">KENALI → RANCANG → ALAMI → BUKTIKAN → REFLEKSI → TUMBUH</div>
+      <div class="output">OUTPUT: Bukti proses & perkembangan pemahaman peserta didik</div>
+      <div class="keterhubungan">Melanjutkan "Peta Profil Belajarku" dan menjadi bahan "Kartu 3T".</div>
+    </div>
+
+    <!-- 4. PPL Terbimbing -->
+    <div class="card">
+      <span class="number">4</span>
+      <div class="matkul">PPL Terbimbing</div>
+      <h3>Kartu 3T: Temukan – Tindakkan – Tumbuh</h3>
+      <div class="innovation-name">"Satu masalah → satu perbaikan → satu bukti perubahan."</div>
+      <p><span class="label">Bentuk:</span> Kartu refleksi guru yang diisi 3–5 menit setelah mengajar.</p>
+      <ul>
+        <li>🔍 <strong>Temukan</strong> — Apa masalah pembelajaran hari ini?</li>
+        <li>🛠️ <strong>Tindakkan</strong> — Apa perubahan kecil yang akan dicoba?</li>
+        <li>🌱 <strong>Tumbuh</strong> — Apakah perubahan berhasil? Apa buktinya?</li>
+      </ul>
+      <div class="alur">BUKTI BELAJAR → REFLEKSI GURU → PERBAIKAN → UJI KEMBALI</div>
+      <div class="output">OUTPUT: Perbaikan pembelajaran berbasis bukti</div>
+      <div class="keterhubungan">Menggunakan data dari "Paspor Deep Learning" dan "Peta Profil Belajar".</div>
+    </div>
+
+    <!-- 5. Growth Mindset -->
+    <div class="card">
+      <span class="number">5</span>
+      <div class="matkul">Pola Pikir Bertumbuh (Growth Mindset)</div>
+      <h3>Bingo Berani Bertumbuh</h3>
+      <div class="innovation-name">"Saya tidak mengejar sempurna, saya mengejar perkembangan."</div>
+      <p><span class="label">Bentuk:</span> Papan Bingo 3×3 berisi perilaku Growth Mindset.</p>
+      <ul>
+        <li>✅ Saya mencoba strategi baru</li>
+        <li>✅ Saya berani bertanya</li>
+        <li>✅ Saya memperbaiki jawaban</li>
+        <li>✅ Saya meminta feedback</li>
+        <li>✅ Saya tidak menyerah setelah salah</li>
+        <li>✅ Kotak tengah: <strong>"BELUM, TAPI..."</strong></li>
+      </ul>
+      <div class="alur">TANTANGAN → MENCOBA → MENERIMA FEEDBACK → MEMPERBAIKI → MENYADARI PERKEMBANGAN</div>
+      <div class="output">OUTPUT: Perilaku bertumbuh pada peserta didik</div>
+      <div class="keterhubungan">Melanjutkan "Kartu 3T" dan menjadi dasar "Papan Navigasi Belajar Digital".</div>
+    </div>
+
+    <!-- 6. PPDB -->
+    <div class="card">
+      <span class="number">6</span>
+      <div class="matkul">Pengajaran dan Pembelajaran Daring dan Bauran (PPDB)</div>
+      <h3>Papan Navigasi Belajar Digital</h3>
+      <div class="innovation-name">"Tahu harus belajar apa, kapan, dan melalui media apa."</div>
+      <p><span class="label">Bentuk:</span> Papan/lembar navigasi digital di Google Site atau Canva.</p>
+      <ul>
+        <li>🏁 <strong>START</strong> — Apa yang sudah saya tahu?</li>
+        <li>💻 <strong>POS 1</strong> — Belajar Mandiri (daring)</li>
+        <li>💬 <strong>POS 2</strong> — Diskusi</li>
+        <li>👥 <strong>POS 3</strong> — Tatap Muka</li>
+        <li>🧩 <strong>POS 4</strong> — Tantangan</li>
+        <li>🏆 <strong>FINISH</strong> — Refleksi</li>
+      </ul>
+      <div class="alur">SUARA → PROFIL → DEEP LEARNING → GROWTH MINDSET → REFLEKSI → TINDAK LANJUT</div>
+      <div class="output">OUTPUT: Alur pembelajaran terintegrasi daring & luring</div>
+      <div class="keterhubungan">Mengintegrasikan seluruh inovasi dari matkul 1–5.</div>
+    </div>
+
+    <!-- 7. PSE -->
+    <div class="card">
+      <span class="number">7</span>
+      <div class="matkul">Pembelajaran Sosial Emosional (PSE)</div>
+      <h3>Kotak Tenang: Jeda – Dengar – Respon</h3>
+      <div class="innovation-name">"Kelola emosi, bangun koneksi."</div>
+      <p><span class="label">Bentuk:</span> Kotak kecil berisi kartu strategi regulasi emosi guru dan check-in perasaan murid.</p>
+      <ul>
+        <li>🧘 <strong>Kartu JEDA</strong> — Tarik napas 3x sebelum merespons</li>
+        <li>👂 <strong>Kartu DENGAR</strong> — Tanyakan perasaan murid</li>
+        <li>💬 <strong>Kartu RESPON</strong> — Pilih respons menenangkan</li>
+        <li>📝 <strong>Kartu CHECK-IN</strong> — Bagaimana perasaanmu hari ini?</li>
+        <li>📓 <strong>Kartu REFLEKSI</strong> — Apa yang saya rasakan setelah mengajar?</li>
+      </ul>
+      <div class="alur">EMOSI DIKENALI → JEDA DILAKUKAN → MURID DIDENGAR → RESPON DIPILIH → REFLEKSI DITULIS</div>
+      <div class="output">OUTPUT: Guru tenang, murid merasa aman secara emosional</div>
+      <div class="keterhubungan">Melanjutkan "Suara Belajar Jar" dan "Kartu 3T".</div>
+    </div>
+
+    <!-- 8. PMAL -->
+    <div class="card">
+      <span class="number">8</span>
+      <div class="matkul">Pembelajaran Mendalam dan Asesmen Lanjut (PMAL)</div>
+      <h3>Peta Belajar Berdiferensiasi: DUP – TaRL – CRT</h3>
+      <div class="innovation-name">"Setiap murid punya jalur belajarnya sendiri."</div>
+      <p><span class="label">Bentuk:</span> Satu lembar peta pembelajaran yang memuat tiga pendekatan.</p>
+      <ul>
+        <li>🌐 <strong>DUP</strong> — Akses belajar untuk semua</li>
+        <li>📊 <strong>TaRL</strong> — Pembelajaran sesuai tingkat kemampuan</li>
+        <li>🏡 <strong>CRT</strong> — Pembelajaran berbasis budaya murid</li>
+      </ul>
+      <p><span class="label">Cara:</span> Asesmen awal → kelompokkan murid → pilih pendekatan → catat perkembangan.</p>
+      <div class="alur">ASESMEN AWAL → DATA KEBUTUHAN → PILIH PENDEKATAN → PEMBELAJARAN DIRANCANG → PERKEMBANGAN DICATAT</div>
+      <div class="output">OUTPUT: Pembelajaran sesuai kemampuan & budaya murid</div>
+      <div class="keterhubungan">Melanjutkan "Peta Profil Belajarku" dari PPDP.</div>
+    </div>
+
+    <!-- 9. PPL Mandiri -->
+    <div class="card">
+      <span class="number">9</span>
+      <div class="matkul">PPL Mandiri</div>
+      <h3>Jurnal Reflektif Guru: Lihat – Pahami – Ubah</h3>
+      <div class="innovation-name">"Guru yang baik adalah guru yang belajar dari praktiknya."</div>
+      <p><span class="label">Bentuk:</span> Buku jurnal yang diisi guru setelah setiap siklus pembelajaran.</p>
+      <ul>
+        <li>👁️ <strong>LIHAT</strong> — Apa yang terjadi di kelas?</li>
+        <li>🧠 <strong>PAHAMI</strong> — Mengapa hal itu terjadi?</li>
+        <li>🔄 <strong>UBAH</strong> — Apa yang akan saya ubah?</li>
+        <li>📊 <strong>BUKTI</strong> — Apa bukti perubahan berhasil?</li>
+      </ul>
+      <div class="alur">PENGALAMAN → REFLEKSI → ANALISIS → PERBAIKAN → BUKTI</div>
+      <div class="output">OUTPUT: Perbaikan pembelajaran berkelanjutan</div>
+      <div class="keterhubungan">Melanjutkan "Kartu 3T" dengan analisis akar masalah dan bukti perubahan.</div>
+    </div>
+
+    <!-- 10. Projek Kepemimpinan -->
+    <div class="card">
+      <span class="number">10</span>
+      <div class="matkul">Projek Kepemimpinan</div>
+      <h3>Pohon Kontribusi: Akar – Batang – Daun – Buah</h3>
+      <div class="innovation-name">"Setiap peran memiliki nilai dan dampak."</div>
+      <p><span class="label">Bentuk:</span> Poster/lembar digital berbentuk pohon yang memetakan kontribusi tim.</p>
+      <ul>
+        <li>🌱 <strong>AKAR</strong> — Nilai dan alasan projek</li>
+        <li>🌳 <strong>BATANG</strong> — Peran dan tanggung jawab</li>
+        <li>🍃 <strong>DAUN</strong> — Kegiatan dan aksi nyata</li>
+        <li>🍎 <strong>BUAH</strong> — Manfaat dan dampak</li>
+      </ul>
+      <div class="alur">NILAI → PERAN → AKSI → DAMPAK</div>
+      <div class="output">OUTPUT: Kontribusi nyata setiap anggota tim</div>
+      <div class="keterhubungan">Melanjutkan semangat "Bingo Berani Bertumbuh" dan "Papan Navigasi Belajar Digital".</div>
+    </div>
+
+  </div>
+
+  <!-- FLOW SECTION -->
+  <div class="flow-section">
+    <h2>🔗 Alur Keterkaitan 10 Inovasi</h2>
+    <div class="flow">
+      <div class="flow-step">1. FPPN<small>Suara Belajar Jar</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">2. PPDP<small>Peta Profil Belajarku</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">3. PMAD<small>Paspor Deep Learning</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">4. PPL Terbimbing<small>Kartu 3T</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">5. Growth Mindset<small>Bingo Berani Bertumbuh</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">6. PPDB<small>Papan Navigasi Digital</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">7. PSE<small>Kotak Tenang</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">8. PMAL<small>Peta Belajar Berdiferensiasi</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">9. PPL Mandiri<small>Jurnal Reflektif Guru</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">10. Projek Kepemimpinan<small>Pohon Kontribusi</small></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <strong>Ekosistem Pembelajaran Pendidikan Pancasila</strong>
+    <p>
+      Peserta didik didengar → dipahami kebutuhannya → diberi pengalaman mendalam → 
+      didorong bertumbuh → guru memperbaiki berbasis bukti → emosi dikelola → 
+      diferensiasi diterapkan → refleksi berkelanjutan → kontribusi nyata.
+    </p>
+    <div class="credit">
+      © 2026 Atalia, S.Pd. | NPM: 25100136162466 | PPG Universitas Bung Hatta
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
